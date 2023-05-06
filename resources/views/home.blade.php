@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                     
+                    {{ __('BIENVENIDO A ADMINISTRAR TU PORTFOLIO!') }}
                 </div>
             </div>
         </div>

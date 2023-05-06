@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
  * Class ProyectoController
  * @package App\Http\Controllers
  */
+
+
 class ProyectoController extends Controller
 {
     /**
@@ -16,6 +18,17 @@ class ProyectoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /****************************************************
+      * UTILIZADO PARA EVITAR AL ACCESO SIN LOGIN
+     *****************************************************/
+        
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         $proyectos = Proyecto::paginate();

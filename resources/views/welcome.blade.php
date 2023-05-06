@@ -3,18 +3,18 @@
  @section('content')
  @foreach ($proyectos as $proyecto)
 
- <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+ <div class="grid-item col-md-4 col-sm-6 col-xs-12">
      <figure>
          <img src="{{ $proyecto->imagen }}" alt="img04">
          <figcaption class="fig-caption">
              <i class="fa fa-search"></i>
              <h5 class="title">{{ $proyecto->nombre }}</h5>
              <span class="sub-title">Photograpy</span>
-             <a data-fancybox data-src="#mh{{ $proyecto->id }}"></a>
+             <!-- <a data-fancybox data-src="#mh{{ $proyecto->id }}"></a> -->
+             <a href="{{ $proyecto->imagen }}" data-fancybox data-src="#mh{{ $proyecto->id }}"></a>
          </figcaption>
      </figure>
  </div>
-
 
  <div class="mh-portfolio-modal" id="mh{{ $proyecto->id }}">
      <div class="container">
@@ -38,7 +38,7 @@
                          <li><span>Javascript</span></li>
                      </ul>
                  </div>
-                 <a href="{{ $proyecto->url }}" class="btn btn-fill">Live Demo</a>
+                 <a href="{{ $proyecto->url }}" class="btn btn-fill">Visitar</a>
              </div>
              <div class="col-sm-7">
                  <div class="mh-portfolio-modal-img">
@@ -51,5 +51,6 @@
          </div>
      </div>
  </div>
- @endforeach
+  
+  @endforeach
  @endsection
